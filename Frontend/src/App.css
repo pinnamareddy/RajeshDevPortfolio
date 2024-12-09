@@ -1,42 +1,63 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.navbar-title{
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem; 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+  background-color: antiquewhite;
+}
+
+.nav-links{
+  display: flex;
+  margin-left: 3rem;
+}
+
+.nav-element{
+  margin: 0 0 0 3rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(13, 13, 13);
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.mobile-menu-icon {
+  display: none;
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .navbar-title{
+    font-size: 1rem; 
   }
-  to {
-    transform: rotate(360deg);
+  .nav-element{
+    margin: 0 0 0 1rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* mobile */
+@media (max-width: 426px) {
+  
+  .nav-links{
+    display: none;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .mobile-menu-icon {
+    display: inline-block;
+  }
 }
