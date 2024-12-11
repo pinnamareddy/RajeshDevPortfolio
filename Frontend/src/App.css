@@ -3,6 +3,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.button {
+  background-color: #f0f0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:12px;
+  border-radius: 6px;
+
+}
+
 .navbar-title{
   font-family: "Rock Salt", cursive;
   font-weight: 400;
@@ -41,18 +51,43 @@ a{
   display: none;
 }
 
+/* Profile */
+.profile-page{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 8rem;
+}
+.profile-image{
+  width:25rem
+}
+
+.resume-button {
+  display: inline-block;
+  border: 1px solid;
+  padding: 15px;
+  border-radius: 25px;
+  margin: 40px 0px 10px 0px;
+}
 /* tablet */
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .navbar-title{
     font-size: 1rem; 
   }
+  
   .nav-element{
     margin: 0 0 0 1rem;
+  }
+  /* profile */
+  .profile-page{
+    align-items: center;
+  }
+  .profile-image{
+    width:10rem
   }
 }
 
 /* mobile */
-@media (max-width: 426px) {
+@media (max-width: 600px) {
   
   .nav-links{
     display: none;
@@ -60,4 +95,14 @@ a{
   .mobile-menu-icon {
     display: inline-block;
   }
+  /* profile */
+  .profile-page{
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 4rem;
+  }
+  .profile-image{
+    width:10rem;
+  }
+ 
 }
