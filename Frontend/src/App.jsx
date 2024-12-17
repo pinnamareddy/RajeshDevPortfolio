@@ -1,6 +1,7 @@
 
 import './App.css'
 import Navbar from './Navbar'
+import Footer from './Footer'
 import Profile from './profile'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
      <Navbar/>
      <Profile/>
+     <Footer/>
     </>
   )
 }
