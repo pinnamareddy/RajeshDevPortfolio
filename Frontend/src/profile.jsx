@@ -1,9 +1,10 @@
 import ProfileImage from './assets/profile.jpg';
+import Resume from '/public/Resume.pdf';
 
 
 const profile = () => {
   const openPdf = () => {
-  window.open("/src/assets/Resume.pdf", "_blank");
+  window.open(Resume, "_blank");
 };
   return (
     <div className="profile-page">
