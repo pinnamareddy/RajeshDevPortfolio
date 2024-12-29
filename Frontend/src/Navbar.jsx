@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect, useRef } from "react"
 import './App.css'
 import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 import { styled } from '@mui/system';
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     const [isMobile, setIsMobile] = useState(false)
     const [anchor, setAnchor] = useState(null);
     const closeButtonRef = useRef()
@@ -44,7 +45,7 @@ const Navbar = () => {
             <a href="#projects" className='nav-element' onClick={() => setIsMobile(false)}>Projects</a>
             </li>
             <li>
-            <a href="#contact" className='nav-element' onClick={() => setIsMobile(false)}>Contact</a>
+            <a href="#contact" className='nav-element' onClick={() => {setIsMobile(false) ; props?.moveToContact()}}>Contact</a>
             </li>
             <li>
             <a href="#signin" className='nav-element' onClick={() => setIsMobile(false)}>Sign in</a>
@@ -58,19 +59,19 @@ const Navbar = () => {
         <PopupBody>
             
             <div>
-            <a href="#about"  onClick={() => {setIsMobile(false)}} onTouchStart={() => setIsMobile(false)}  >About</a>
+            <a href="#about"  onTouchStart={() => handleClick(false)}  >About</a>
             </div>
             <div>
-            <a href="#experience"  onClick={() => setIsMobile(false)} onTouchStart={() => setIsMobile(false)}>Experience</a>
+            <a href="#experience"  onTouchStart={() => handleClick(false)}>Experience</a>
             </div>
             <div>
-            <a href="#projects"  onClick={() => setIsMobile(false)} onTouchStart={() => setIsMobile(false)}>Projects</a>
+            <a href="#projects"  onTouchStart={() => handleClick(false)}>Projects</a>
             </div>
             <div>
-            <a href="#contact"  onClick={() => setIsMobile(false)} onTouchStart={() => setIsMobile(false)}>Contact</a>
+            <a href="#contact"  onTouchStart={() => handleClick(false)}>Contact</a>
             </div>
             <div>
-            <a href="#signin"  onClick={() => setIsMobile(false)} onTouchStart={() => setIsMobile(false)}>Sign in</a>
+            <a href="#signin"  onTouchStart={() => handleClick(false)}>Sign in</a>
             </div>
         </PopupBody>
       </BasePopup>

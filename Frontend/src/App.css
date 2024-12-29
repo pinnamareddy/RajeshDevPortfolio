@@ -68,6 +68,53 @@ a{
   border-radius: 25px;
   margin: 40px 0px 10px 0px;
 }
+
+.contact-form-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.input-container {
+  margin-bottom: 15px;
+}
+
+.input-container label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-container input:focus,
+.input-container textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.input-container textarea {
+  resize: vertical;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 180px;
+}
+
 /* tablet */
 @media (max-width: 830px) {
   .navbar-title{
